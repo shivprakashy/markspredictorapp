@@ -1,4 +1,4 @@
-import pickle, numpy as np
+import pickle, NumPy as np
 
 def main():
     pass
