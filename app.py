@@ -16,5 +16,4 @@ def appRoot():
         return render_template("index.html", err=err, hrs=hrs, marks=marks+hrs)
 
 if __name__ == "__main__":
-    #app.run(debug=False)
-    app.run(host='0.0.0.0')
+    app.run(debug=False)
