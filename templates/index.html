@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Marks Predictor App</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' href="{{ url_for('static',filename='main.css') }}?v=0.1" />
+    <script src="{{ url_for('static',filename='main.js') }}"></script>
+</head>
+<body>
+    <div id="main_content">
+        {% if err %}
+        <div id="error">Error: {{ err }}</div>
+        {% endif %}
+        <div id="container">
+            <form action="/" method="POST">
+                <input type="number" min=0 max=24 name="hrs" placeholder="How many hours you study?" />
+                <button type="submit">Get Predicted Marks</button>
+            </form>
+        </div>
+        {% if marks %}
+        <div id="result">Result: if you study {{hrs}} hours you may get {{ marks }} marks</div>
+        {% endif %}
+    </div>
+</body>
+</html>
